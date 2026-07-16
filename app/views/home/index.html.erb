@@ -1,0 +1,12 @@
+<h1>Livros lidos no ano</h1>
+<hr />
+<a href="/livros/new">Cadastrar</a>
+<a href="/livros">Ver todos</a>
+<hr />
+<ul>
+    <% @livros.each do |livro| %>
+        <li>
+            <a href="/livros/<%= livro.id %>"><%= livro.titulo %></a>
+        </li>
+    <% end %>
+</ul>

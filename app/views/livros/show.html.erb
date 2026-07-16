@@ -1,0 +1,15 @@
+<h1><%= @livro.titulo %></h1>
+<hr />
+<a href="/">Home</a>
+<a href="/livros/new">Cadastrar</a>
+<a href="/livros">Listar</a>
+<hr />
+<form action="/livros/<%= @livro.id %>/edit" method="get">
+    <input type="submit" value="Editar" />
+</form>
+<form action="/livros/<%= @livro.id %>" method="delete">
+    <input type="submit" value="Excluir" />
+</form>
+<p>Nota: <%= @livro.nota %>/10 </p>
+<p>Autor: <%= @livro.autor %></p>
+<p>Descrição: <%= @livro.descricao %></p>
