@@ -1,23 +1,27 @@
 <h1>Cadastro</h1>
-<hr />
-<a href="/"><- Cancelar</a>
-<hr />
 <form action="/livros/<%= @livro.id %>" method="<%= @livro.id ? 'put' : 'post' %>">
-    <label for="titulo">Título</label>
-    <input type="text" value="<%= @livro.titulo %>" name="livro[titulo]" id="titulo" />
-    <br />
+    <div class="mb-3">
+        <label for="titulo" class="form-label">Título</label>
+        <input class="form-control" type="text" value="<%= @livro.titulo %>" name="livro[titulo]" id="titulo" />
+    </div>
 
-    <label for="autor">Autor</label>
-    <input type="text" value="<%= @livro.autor %>" name="livro[autor]" id="autor" />
-    <br />
+    <div class="mb-3">
+        <label for="autor" class="form-label">Autor</label>
+        <input class="form-control" type="text" value="<%= @livro.autor %>" name="livro[autor]" id="autor" />
+    </div>
 
-    <label for="nota">Nota</label>
-    <input type="range" value="<%= @livro.nota %>" name="livro[nota]" id="nota" min="0" max="10" value="10" />
-    <br />
+    <div class="mb-3">
+        <label for="nota" class="form-label">Nota</label>
+        <input class="form-range" type="range" value="<%= @livro.nota %>" name="livro[nota]" id="nota" min="0" max="10" value="10" />
+    </div>
 
-    <label for="descricao">Descrição</label>
-    <textarea name="livro[descricao]" id="descricao"><%= @livro.descricao %></textarea>
-    <br />
+    <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição</label>
+        <textarea class="form-control" name="livro[descricao]" id="descricao"><%= @livro.descricao %></textarea>
+    </div>
 
-    <input type="submit" value="Enviar" />
+    <div class="mb-3">
+        <input class="btn btn-primary" type="submit" value="Enviar" />
+        <a href="/" class="btn btn-danger">Cancelar</a>
+    </div>
 </form>

@@ -1,12 +1,9 @@
+<% content_for :title do %> Home <% end %>
 <h1>Livros lidos no ano</h1>
-<hr />
-<a href="/livros/new">Cadastrar</a>
-<a href="/livros">Ver todos</a>
-<hr />
-<ul>
+<ul class="nav flex-column">
     <% @livros.each do |livro| %>
-        <li>
-            <a href="/livros/<%= livro.id %>"><%= livro.titulo %></a>
+        <li class="nav-item bg-primary rounded">
+            <a href="/livros/<%= livro.id %>" class="nav-link text-light"><%= livro.titulo %></a>
         </li>
     <% end %>
 </ul>
